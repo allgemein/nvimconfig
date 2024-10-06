@@ -1,27 +1,26 @@
 let g:python3_host_prog = '/Users/amanetamada/.pyenv/versions/3.7.5/bin/python'
 
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+if &compatible
+  set nocompatible
+endif
 
-if dein#load_state('~/.cache/dein')
-	call dein#begin('~/.cache/dein')
-	call dein#load_toml( '~/.config/nvim/dein.toml', {} )
-	if !has('nvim')
-		call dein#add('roxma/nvim-yarp')
-		call dein#add('roxma/vim-hug-neovim-rpc')
-	endif
+set runtimepath+=/Users/amanetamada/.cache/dein/repos/github.com/Shougo/dein.vim
 
-	call dein#end()
-	call dein#save_state()
+if dein#load_state('/Users/amanetamada/.cache/dein')
+  call dein#begin('/Users/amanetamada/.cache/dein')
+
+  call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
+
+  call dein#end()
+  call dein#save_state()
 endif
 
 if dein#check_install()
-	call dein#install()
+  call dein#install()
 endif
-
 
 filetype plugin indent on
 colorscheme jellybeans
-
 
 set title
 set number
