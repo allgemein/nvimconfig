@@ -180,7 +180,7 @@ return {
     lazy = false,
     dependencies = { "folke/snacks.nvim" },
     opts = {
-      terminal_cmd = "/home/amane/.local/bin/claude",
+      terminal_cmd = "~/.local/bin/claude",
     },
     config = true,
     keys = {
